@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack"
+    "build-dev": "webpack",
+    "build": "NODE_ENV=production webpack"
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
