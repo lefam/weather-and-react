@@ -23,8 +23,16 @@ module.exports = {
     output: {
         path: `${baseDir}/dist`
     },
-    serve: {
-        open: true
+    devServer: {
+        open: true,
+        proxy: {
+            '/weather-api/': {
+                target: 'https://query.yahooapis.com',
+                pathRewrite: {'^/weather-api' : ''},
+                secure: false,
+                changeOrigin: true
+            }
+        }
     },
     module: {
         rules: [
