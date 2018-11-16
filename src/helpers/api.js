@@ -32,7 +32,9 @@ export default {
   request(method, url, params, authToken) {
     const config = {
       method,
-      headers: {},
+      headers: {
+        'Accept': 'application/json'
+      },
       credentials: 'include'
     };
 
