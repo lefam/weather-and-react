@@ -9,7 +9,7 @@ export default class WeatherService {
      * @returns {Promise<any>}
      */
     static getLocationConditions(lat, lng) {
-        const yql = `select item.condition from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text="(${lat}, ${lng})")`;
+        const yql = `select * from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text="(${lat}, ${lng})")`;
         const url = `/weather-api/v1/public/yql?q=${encodeURIComponent(yql)}`;
 
         return Api.get(url);
