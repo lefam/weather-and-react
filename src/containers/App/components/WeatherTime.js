@@ -8,7 +8,7 @@ const WeatherTime = ({ weatherApiResponse, weatherApiStatus}) => {
         statusComponent = null;
 
     if (weatherApiResponse) {
-        const currentTime = moment(weatherApiResponse.query.results.channel.item.condition.date, 'ddd, D MMM YYYY HH:mm Z');
+        const currentTime = moment(weatherApiResponse.query.results.channel.lastBuildDate, 'ddd, D MMM YYYY HH:mm Z');
 
         timeComponent = <div>{currentTime.format('HH:mm')}</div>
     }
