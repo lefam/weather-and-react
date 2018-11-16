@@ -19,7 +19,7 @@ if (isDev) {
 
 module.exports = {
     mode,
-    entry: `${baseDir}/src/index.js`,
+    entry: ['@babel/polyfill', `${baseDir}/src/index.js`],
     output: {
         path: `${baseDir}/dist`
     },
