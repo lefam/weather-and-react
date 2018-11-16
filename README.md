@@ -21,6 +21,7 @@ Tech stack:
 * The current (geo)location of the browser can be faked using developer tools, ie, you can manually set a location for
 testing.
 
+* Detection of browser location and fetching of weather info may take few seconds in some situations. Please be patient.
 
 ## Deployment / local
 

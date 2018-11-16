@@ -100,7 +100,7 @@ export default class App extends Component {
 
         return (
             <div className={styles.container}>
-                <Header />
+                <Header weatherApiResponse={weatherApiResponse} />
                 <div className={styles.main}>
                     {statusComponent}
                     {detectingLocation && <div>Detecting Location... </div>}
@@ -110,7 +110,7 @@ export default class App extends Component {
                         weatherApiStatus={weatherApiStatus}
                     />
                 </div>
-                <Footer />
+                <Footer weatherApiResponse={weatherApiResponse} />
             </div>
         );
     }
